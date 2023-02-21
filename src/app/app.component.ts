@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
-  assets = ["/assets/star.jpg", "", "", "/assets/cash.jpg"]
+  assets = ["/assets/img/star.jpg", "", "", "/assets/img/cash.jpg"]
   clicked = false;
 
   onClick(event?: MouseEvent) {

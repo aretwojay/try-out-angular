@@ -1,0 +1,31 @@
+<form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+  <div *ngIf="status != 'VALID'" class="form-control"
+    [ngClass]="{'error' : status && contactForm.controls['firstName'].errors}">
+    <label for="first-name">Prénom</label>
+    <input id="first-name" type="text" formControlName="firstName">
+    <span class="error-message" *ngIf="status && contactForm.controls['firstName'].errors?.['required']">
+      Votre prénom est requis.
+    </span>
+  </div>
+
+  <div *ngIf="status != 'VALID'" class="form-control"
+    [ngClass]="{'error' : status && contactForm.controls['email'].errors}">
+    <label for="email">Email</label>
+    <input id="email" type="text" formControlName="email" email>
+    <span class="error-message" *ngIf="status && contactForm.controls['email'].errors?.['required']">
+      Votre adresse email est requise.
+    </span>
+    <span class="error-message" *ngIf="status && contactForm.controls['email'].errors?.['email']">
+      Votre adresse email n'est pas valide.
+    </span>
+  </div>
+
+  <button *ngIf="status != 'VALID' else elseBlock" id="submit-btn" type="submit">
+    Envoyer
+  </button>
+  <ng-template #elseBlock>
+    Merci ! On revient vers vous au plus vite.
+  </ng-template>
+
+</form>

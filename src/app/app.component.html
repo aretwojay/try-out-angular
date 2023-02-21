@@ -3,9 +3,11 @@
   <div class="circle" *ngFor="let asset of assets" style="background-image: url({{asset}});" (click)="onClick($event)">
   </div>
 
-  <div class="modal-bg" *ngIf="clicked" (click)="onClick($event)">
-    <div class="modal">
+  <div class="modal-bg" *ngIf="clicked">
 
+    <div class="modal">
+      <div id="close-btn" (click)="onClick($event)">X</div>
+      <app-form></app-form>
     </div>
   </div>
 
