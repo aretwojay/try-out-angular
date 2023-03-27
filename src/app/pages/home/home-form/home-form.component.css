@@ -1,11 +1,5 @@
-@font-face {
-    font-family: "WorkSans";
-    src: url("../../assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf");
-}
-
 * {
     font-family: "WorkSans";
-
 }
 
 label {

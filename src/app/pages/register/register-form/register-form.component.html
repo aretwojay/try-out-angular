@@ -1,0 +1,26 @@
+<div class="register-container">
+    <form class="register-form" [formGroup]="registerForm">
+        <div class="form-control">
+            <input type="text" placeholder="Email" formControlName="email">
+            <span class="error error-message" *ngIf="submitted && registerForm.controls['email'].errors?.['required']">
+                Votre adresse email est requise.
+            </span>
+        </div>
+
+        <div class="form-control">
+            <input type="password" placeholder="Password" formControlName="password">
+            <span class="error error-message"
+                *ngIf="submitted && registerForm.controls['password'].errors?.['required']">
+                Votre mot de passe est requis.
+            </span>
+        </div>
+
+        <button class="btn" type="submit" (click)="onSubmit()">
+            Register
+        </button>
+    </form>
+    <div *ngFor="let error of registerErrors">
+        <span *ngIf="error.code === authService.state">{{error.message}}</span>
+    </div>
+
+</div>

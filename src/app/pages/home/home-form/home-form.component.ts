@@ -3,12 +3,12 @@ import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['../app.component.css', 'form.component.css']
+  selector: 'app-home-form',
+  templateUrl: './home-form.component.html',
+  styleUrls: ['home-form.component.css']
 })
-export class FormComponent {
-  title = 'form';
+export class HomeFormComponent {
+  title = 'home-form';
   contactForm = this.fb.group({
     firstName: ['', [Validators.required]],
     email: ['', Validators.required],

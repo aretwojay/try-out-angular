@@ -1,0 +1,12 @@
+a:-webkit-any-link {
+    color: unset;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    gap: 5vw;
+    list-style-type: none;
+    text-transform: capitalize;
+}

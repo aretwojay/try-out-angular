@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
-  assets = ["/assets/img/star.jpg", "", "", "/assets/img/cash.jpg"]
-  clicked = false;
 
-  onClick(event?: MouseEvent) {
-    this.clicked = !this.clicked;
-  }
 }

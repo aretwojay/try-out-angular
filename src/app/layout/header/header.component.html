@@ -1,0 +1,9 @@
+<div>
+    <ul class="navbar">
+        <li *ngFor="let route of routePaths">
+            <a routerLink={{route.path}} *ngIf="!['**'].includes(route.path)">
+                {{route.path}}
+            </a>
+        </li>
+    </ul>
+</div>

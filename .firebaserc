@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-tibby": {
+      "hosting": {
+        "my-app": [
+          "test-tibby"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-tibby"
+  }
+}

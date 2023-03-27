@@ -1,0 +1,15 @@
+<div class="home-container">
+
+    <div class="circle" *ngFor="let asset of assets" style="background-image: url({{asset}});"
+        (click)="onClick($event)">
+    </div>
+
+    <div class="modal-bg" *ngIf="clicked">
+
+        <div class="modal">
+            <div id="close-btn" (click)="onClick($event)">X</div>
+            <app-home-form></app-home-form>
+        </div>
+    </div>
+
+</div>

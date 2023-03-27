@@ -1,14 +1,5 @@
 <div class="background">
+  <app-header></app-header>
 
-  <div class="circle" *ngFor="let asset of assets" style="background-image: url({{asset}});" (click)="onClick($event)">
-  </div>
-
-  <div class="modal-bg" *ngIf="clicked">
-
-    <div class="modal">
-      <div id="close-btn" (click)="onClick($event)">X</div>
-      <app-form></app-form>
-    </div>
-  </div>
-
+  <router-outlet></router-outlet>
 </div>
